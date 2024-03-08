@@ -4,11 +4,11 @@ version: 2.1
 orbs:
   node: circleci/node@5
 jobs:
-  docker:
-    - cypress/base
   test-node:
     # Install node dependencies and run tests
     executor: node/default
+    docker:
+      - cypress/base
     steps:
       - checkout
       - node/install-packages:
