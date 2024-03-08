@@ -4,7 +4,7 @@ version: 2.1
 orbs:
   cypress: cypress-io/cypress@3
 jobs:
-  cypress test:
+  cypress/run:
     docker:
       - image: cypress/base:latest
     start-command: 'npm run start'
@@ -31,7 +31,7 @@ jobs:
 workflows:
   build-and-test:
     jobs:
-      - test-node
+      - cypress/run
       - build-node:
           requires:
             - test-node
