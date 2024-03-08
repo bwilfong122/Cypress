@@ -1,4 +1,4 @@
-export default [
+export let QUESTIONS = [
     {
       id: 'q1',
       text: 'Who voices Joy in Pixar’s Inside Out?',
