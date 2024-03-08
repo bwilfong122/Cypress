@@ -33,7 +33,7 @@ jobs:
           pkg-manager: npm
       - run:
           name: Starting the npm sever
-          command: npm run start
+          command: npm run start&
       - run:
           name: Run tests
           command: npm run cypress:run
