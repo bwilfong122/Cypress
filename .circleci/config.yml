@@ -2,20 +2,13 @@
 # Stacks detected: deps:node:.
 version: 2.1
 orbs:
-  node: circleci/node@5
+  cypress: cypress-io/cypress@3
 jobs:
-  test-node:
-    # Install node dependencies and run tests
-    executor: node/default
+  cypress test:
     docker:
       - image: cypress/base:latest
-    steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: npm
-      - run:
-          name: Run tests
-          command: npm run cypress:run --headless
+    start-command: 'npm run start'
+    cypress-command: 'npm run cypress:run'
   build-node:
     # Build node project
     executor: node/default
