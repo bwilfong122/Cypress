@@ -25,11 +25,11 @@ export default function Summary({ userAnswers }) {
           <span className="text">skipped</span>
         </p>
         <p>
-          <span className="number">{correctAnswersShare}%</span>
+          <span className="number" id="numberCorrect">{correctAnswersShare}%</span>
           <span className="text">answered correctly</span>
         </p>
         <p>
-          <span className="number">{wrongAnswersShare}%</span>
+          <span className="number" id="numberWrong">{wrongAnswersShare}%</span>
           <span className="text">answered incorrectly</span>
         </p>
       </div>

@@ -10,14 +10,14 @@ export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
     isCorrect: null,
   });
 
-  let timer = 10000;
+  let timer = 20000;
 
   if (answer.selectedAnswer) {
-    timer = 1000;
+    timer = 500;
   }
 
   if (answer.isCorrect !== null) {
-    timer = 2000;
+    timer = 500;
   }
 
   function handleSelectAnswer(answer) {
@@ -34,7 +34,7 @@ export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
 
       setTimeout(() => {
         onSelectAnswer(answer);
-      }, 2000);
+      }, 800);
     }, 1000);
   }
 
