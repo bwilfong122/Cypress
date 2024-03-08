@@ -13,7 +13,7 @@ jobs:
           pkg-manager: npm
       - run:
           name: Run tests
-          command: npm run cypress:test
+          command: npm run cypress:run
   build-node:
     # Build node project
     executor: node/default
