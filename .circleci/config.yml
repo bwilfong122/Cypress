@@ -8,7 +8,7 @@ jobs:
     # Install node dependencies and run tests
     executor: node/default
     docker:
-      - cypress/base
+      - image: cypress/base:latest
     steps:
       - checkout
       - node/install-packages:
