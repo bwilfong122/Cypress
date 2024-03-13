@@ -19,7 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "cypress:ci": "CYPRESS_BASE_URL=http://localhost:3000 npm start & wait-on http-get://localhost:3000 && cypress run"
   },
   "eslintConfig": {
     "extends": [
