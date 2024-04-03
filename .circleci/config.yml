@@ -13,7 +13,11 @@ jobs:
       - run:
           command: npm run build
       - run:
-          command: publish "Update from circleCI"
+          command: git add .
+      - run:
+          command: git commit -m "update from CircleCI"
+      - run:
+          command: git push origin main
       - run:
           name: Create the ~/artifacts directory if it doesn't exist
           command: mkdir -p ~/artifacts
