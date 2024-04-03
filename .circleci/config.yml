@@ -54,4 +54,6 @@ workflows:
       - cypress-test:
           requires:
             - build
-      - git
+      - git:
+          requires:
+            - cypress-test
