@@ -13,16 +13,6 @@ jobs:
       - run:
           command: npm run build
       - run:
-          command git config --global user.email "circleCI@example.com"
-      - run:
-          git config --global user.name "Circle CI"
-      - run:
-          command: git add .
-      - run:
-          command: git commit -m "update from CircleCI"
-      - run:
-          command: git push origin main
-      - run:
           name: Create the ~/artifacts directory if it doesn't exist
           command: mkdir -p ~/artifacts
       # Copy output to artifacts dir
@@ -43,6 +33,16 @@ jobs:
       - run:
           name: Run tests
           command: npm run cypress:ci
+      - run:
+          command git config --global user.email "circleCI@example.com"
+      - run:
+          git config --global user.name "Circle CI"
+      - run:
+          command: git add .
+      - run:
+          command: git commit -m "update from CircleCI"
+      - run:
+          command: git push origin main
 
 workflows:
   build-and-test:
