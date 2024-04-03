@@ -33,6 +33,10 @@ jobs:
       - run:
           name: Run tests
           command: npm run cypress:ci
+  git:
+    # Sends update to git
+    executor: node/default
+    steps:
       - run:
           command git config --global user.email "circleCI@example.com"
       - run:
@@ -43,7 +47,6 @@ jobs:
           command: git commit -m "update from CircleCI"
       - run:
           command: git push origin main
-
 workflows:
   build-and-test:
     jobs:
@@ -51,3 +54,4 @@ workflows:
       - cypress-test:
           requires:
             - build
+      - git
