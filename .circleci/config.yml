@@ -13,9 +13,7 @@ jobs:
       - run:
           command: npm run build
       - run:
-          command: publish
-      - run:
-          command: echo "cicleCI update"
+          command: publish "Update from circleCI"
       - run:
           name: Create the ~/artifacts directory if it doesn't exist
           command: mkdir -p ~/artifacts
