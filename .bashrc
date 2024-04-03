@@ -6,7 +6,7 @@ BRANCH_NAME="main"
 
 publish() {
     # Prompt user for commit message
-    echo "Commit Messege is $1"
+    local COMMIT_MESSAGE="$1"
 
     # Add all changes to the staging area
     git add .
