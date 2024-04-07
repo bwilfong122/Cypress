@@ -1,24 +1,5 @@
 # CicleCI configuration file
 version: 2.1
-commands:
-  send-to-git:
-    parameters:
-      when:
-        type: string
-    description: updated gitlab when fails
-    steps:
-      - run:
-          command: git config --global user.email "circleCI@example.com"
-      - run:
-          command: git config --global user.name "Circle CI"
-      - run:
-          command: git add .
-      - run:
-          command: git commit -m "update from CircleCI"
-      - run:
-          command: git push origin main
-
-
 orbs:
   node: circleci/node@5
 jobs:
@@ -58,8 +39,7 @@ jobs:
             git config user.email "circleCI@example.com" &&
             git config user.name "Circle CI" &&
             git add . &&
-            rm -f .git/index.lock &&
-            git commit -m "update from CircleCI" &&
+            git commit -m "update from CircleCI [ci skip]" &&
             git push -q https://${Github_token}@github.com/bwilfong122/Cypress.git main
           when: on_fail
   # git:
