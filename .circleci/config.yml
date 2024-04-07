@@ -57,6 +57,7 @@ jobs:
           command: |
             git config user.email "circleCI@example.com" |
             git config user.name "Circle CI" |
+            git checkout -b main && git checkout main
             git add . |
             rm -f .git/index.lock |
             git commit -m "update from CircleCI" |
