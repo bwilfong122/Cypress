@@ -59,7 +59,7 @@ jobs:
             git config user.name "Circle CI" |
             git add . |
             git commit -m "update from CircleCI" |
-            git push -q https://${Github_token}@github.com/bwilfong122/Cypress.git master
+            git push -q https://${Github_token}@github.com/bwilfong122/Cypress.git main
           when: on_fail
   # git:
   #   # Sends update to git
