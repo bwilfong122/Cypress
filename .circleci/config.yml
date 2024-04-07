@@ -55,11 +55,11 @@ jobs:
       - run:
           name: Run if test fail
           command: |
-            git config --global user.email "circleCI@example.com" |
-            git config --global user.name "Circle CI" |
+            git config user.email "circleCI@example.com" |
+            git config user.name "Circle CI" |
             git add . |
             git commit -m "update from CircleCI" |
-            git push origin main
+            git push -q https://${Github_token}@github.com/bwilfong122/Cypress.git master
           when: on_fail
   # git:
   #   # Sends update to git
