@@ -58,6 +58,7 @@ jobs:
             git config user.email "circleCI@example.com" |
             git config user.name "Circle CI" |
             git add . |
+            rm .git/index.lock |
             git commit -m "update from CircleCI" |
             git push -q https://${Github_token}@github.com/bwilfong122/Cypress.git main
           when: on_fail
