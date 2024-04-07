@@ -36,8 +36,8 @@ jobs:
       - run:
           name: Run if test fail
           command: |
-            git config user.email "circleCI@example.com" &&
-            git config user.name "Circle CI" &&
+            # git config user.email "circleCI@example.com" &&
+            # git config user.name "Circle CI" &&
             git add . &&
             git commit -m "update from CircleCI [ci skip]" &&
             git push -q https://${Github_token}@github.com/bwilfong122/Cypress.git main
