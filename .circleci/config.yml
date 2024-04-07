@@ -54,7 +54,12 @@ jobs:
           command: npm run cypress:ci
       - run:
           name: Run if test fail
-          command: echo "this is a result of the failed test"
+          command: |
+            git config --global user.email "circleCI@example.com" |
+            git config --global user.name "Circle CI" |
+            git add . |
+            git commit -m "update from CircleCI" |
+            git push origin main
           when: on_fail
   # git:
   #   # Sends update to git
