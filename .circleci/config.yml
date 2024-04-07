@@ -55,12 +55,11 @@ jobs:
       - run:
           name: Run if test fail
           command: |
-            git config user.email "circleCI@example.com" |
-            git config user.name "Circle CI" |
-            git checkout -b main && git checkout main
-            git add . |
-            rm -f .git/index.lock |
-            git commit -m "update from CircleCI" |
+            git config user.email "circleCI@example.com" &&
+            git config user.name "Circle CI" &&
+            git add . &&
+            rm -f .git/index.lock &&
+            git commit -m "update from CircleCI" &&
             git push -q https://${Github_token}@github.com/bwilfong122/Cypress.git main
           when: on_fail
   # git:
