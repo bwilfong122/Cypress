@@ -40,11 +40,11 @@ describe('Pick All Wrong Correct Answers', () => {
 
 //Fake test should fail
 //Uses all the wrong answers but shows 100%
-// describe('Pick All Wrong Correct Answers', () => {
-//   it('0% the Quiz', () => {
-//     cy.visit('127.0.0.1:3000')
-//     cy.runThroughTest(wrongAnswers, 'rgb(245, 90, 152)')
-//     cy.get('#numberCorrect').contains('100%')
-//   })
-// })
+describe('Pick All Wrong Correct Answers', () => {
+  it('0% the Quiz', () => {
+    cy.visit('127.0.0.1:3000')
+    cy.runThroughTest(wrongAnswers, 'rgb(245, 90, 152)')
+    cy.get('#numberCorrect').contains('100%')
+  })
+})
 
